@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authapp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li><a href="/users/new">Create</a></li>
+  <li><a href="/sessions/new">Login</a></li>
+  <li><a href="/admin">Admin</a></li>
+  <li class="active">History</li>
+</ol>
+
+<style>
+label {
+  margin-bottom: 10px;
+}
+input {
+  margin-bottom: 10px;
+}
+</style>
+
+<body>
+
+
+<%= flash[:errors] if flash[:errors] %>
+<%= yield %>
+</body>
+
+</html>
+
+
