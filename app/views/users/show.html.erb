@@ -50,13 +50,16 @@
         <td><%= product.purchased %></td>
         <td>$<%= product.price %></td>
         <td>
+          <%= link_to 'New', new_product_path, :class => 'btn btn-mini' %>
           <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', product_path(product), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
           <tr>
 <% end %>
   </tbody>
 <!-- end of user table -->
 
 </div>
+
 
 
 <!-- graph -->
