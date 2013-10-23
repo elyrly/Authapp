@@ -5,11 +5,13 @@ def index
 end
 
   def new
+    @product = Product.new
     @user = User.new
   end
 
   def show
     @user = User.find(params[:id])
+    @products = Product.all
   end
 
   def create
@@ -23,7 +25,8 @@ end
 end
 
   def edit
-
+     @product = Product.find(params[:id])
+     redirect_to '/'
   end
 
   def update
