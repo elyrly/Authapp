@@ -22,7 +22,7 @@
 </div>
 
 <div class="col-xs-6 col-sm-6 col-md-3">
-
+<h2>MY12 PremMidsize_coupe</h2>
       <p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. </p>
     </div>
   </div>
@@ -48,7 +48,7 @@
         <td><%= link_to product.name, product_path(product) %></td>
         <td><%= product.created_at.present? ? product.created_at.strftime("%B %e, %Y") : product.created_at %></td>
         <td><%= product.purchased %></td>
-        <td>$<%= product.price %></td>
+        <td>$<%= product.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse%></td>
         <td>
           <%= link_to 'New', new_product_path, :class => 'btn btn-mini' %>
           <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-mini' %>
@@ -59,8 +59,6 @@
 <!-- end of user table -->
 
 </div>
-
-
 
 <!-- graph -->
 
