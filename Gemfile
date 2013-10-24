@@ -8,7 +8,8 @@ gem 'rails', '3.2.14'
 gem 'sqlite3'
 gem 'pry'
 gem "chartkick"
-gem 'quiet_assets', :group => :development
+gem 'font-awesome-sass'
+# gem 'quiet_assets', :group => :development
 
 # Gems used only for assets and not required
 # in production environments by default.

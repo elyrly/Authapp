@@ -6,17 +6,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Model:</b>
   <%= @product.name %>
 </p>
 
 <p>
-  <b>Price:</b>
+  <b>Purchased Price:</b>
   <%= @product.price %>
 </p>
 
 <p>
-  <b>Purchased at:</b>
+  <b>Purchased Date:</b>
   <%= @product.purchased %>
 </p>
 
@@ -32,7 +32,7 @@
 <%= link_to 'Back', user_path(current_user) %>
 </div>
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+
 
 
 <!-- map below -->
@@ -66,7 +66,7 @@ var geocoder;
 var map;
 function initialize() {
   geocoder = new google.maps.Geocoder();
-  var latlng = new google.maps.LatLng(29.7628, -95.3831);
+  var latlng = new google.maps.LatLng(40, -100);
 
 
   var mapOptions = {
