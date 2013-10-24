@@ -14,9 +14,10 @@ gem 'font-awesome-sass'
 group :development do
   gem 'pry'
   gem 'sqlite3'
+  #all your other testing gems go here
 end
 
-# added for Heroku
+# added for Heroku pg =PostgreSQL
 group :production do
   gem 'pg'
 end
