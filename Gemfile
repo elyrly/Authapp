@@ -5,11 +5,22 @@ gem 'rails', '3.2.14'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'pry'
 gem "chartkick"
 gem "geocoder"
 gem 'font-awesome-sass'
+
+
+# added for Heroku
+group :development do
+  gem 'pry'
+  gem 'sqlite3'
+end
+
+# added for Heroku
+group :production do
+  gem 'pg'
+end
+
 # gem 'quiet_assets', :group => :development
 
 # Gems used only for assets and not required
