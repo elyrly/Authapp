@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.float :price
       t.string :purchased
-      t.integer :zip
+      t.string :zip
       t.timestamps
     end
   end

@@ -8,6 +8,7 @@ gem 'rails', '3.2.14'
 gem 'sqlite3'
 gem 'pry'
 gem "chartkick"
+gem "geocoder"
 gem 'font-awesome-sass'
 # gem 'quiet_assets', :group => :development
 
