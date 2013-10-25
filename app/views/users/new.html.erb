@@ -1,13 +1,6 @@
 <div class="jumbotron">
   <div class="container">
- <div class="row">
 
-
-    <div class="col-xs-6 col-sm-6 col-md-5" >
-<img src="http://appicns.com/appicns/svg/appicns_TextEdit.svg">
-</div>
-
-<div class="col-xs-12 col-sm-6 col-md-5">
 <h1>Sign Up</h1>
 
 <%= form_for @user do |x| %>
@@ -17,7 +10,6 @@
   <%= x.password_field :password_confirmation, placeholder: "Password Confirmation" %><br>
    <button type="submit" class="btn btn-default btn-lg">Create User</button>
   <%end%>
-</div>
 
 
 
