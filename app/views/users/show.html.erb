@@ -16,8 +16,10 @@
 
 <p>Let’s back up a little bit. This new V8 was co-developed with Audi and is in use in their S8 – albeit with a slight power advantage. Bentley engineers assured us that the new twin-turbo 4-liter V8 would still be a delight to drive, but mostly touted 40% better fuel economy than the W12 (24 mpg on the highway). I am even more bewildered. Has Crewe been getting the wrong customer feedback? Apparently not, remarked one of their product specialists.</p>
 
-<p>Bentley is targeting younger buyers. The new V8 is only down 67 hp and 29 lb-ft, but younger buyers want to see better fuel economy. “It isn’t about the money, it’s about the image,” he remarked. 500hp and 487 lb-ft of torque should isn’t terribly modest considering the loss of 55 lb over the front wheels over the W12 model. Another major change for the V8 is the switch to the much-loved ZF 8-speed transmission that we have sampled in almost every new Audi and BMW in the ALG fleet. The new transmission is just as smooth as in the ones we have tested; however, Bentley tuned it to be even better. The transmission is capable of dropping as many as four speeds at once when the hammer is slammed — a considerable improvement over the W12’s old 6-speed. The extra gears have the GT feeling more ready to power out of turns with its aggressive AWD. 0-60 times have dropped, but only 0.2 secs to 4.6 secs — we didn’t notice.</p>
+<p>Bentley is targeting younger buyers. The new V8 is only down 67 hp and 29 lb-ft, but younger buyers want to see better fuel economy. “It isn’t about the money, it’s about the image,” he remarked. 500hp and 487 lb-ft of torque should isn’t terribly modest considering the loss of 55 lb over the front wheels over the W12 model. Another major change for the V8 is the switch to the much-loved ZF 8-speed transmission that we have sampled in almost every new Audi and BMW in the ALG fleet. The new transmission is just as smooth as in the ones we have tested; however, Bentley tuned it to be even better. The transmission is capable of dropping as many as four speeds at once when the hammer is slammed — a considerable improvement over the W12’s old 6-speed. The extra gears have the GT feeling more ready to power out of turns with its aggressive AWD. 0-60 times have dropped, but only 0.2 secs to 4.6 secs — we didn’t notice.</p>   <h6>Email: <%= @user.email %></h6>
 </div>
+
+
 
 <div class="col-xs-6 col-sm-6 col-md-3">
 <h2>MY2014 Premium Midsize Coupe</h2>
@@ -27,6 +29,8 @@ Economy two-doors start at just over $10,000, while exotic coupes run well in ex
     </div>
   </div>
 
+
+
 <!-- table for users to input data concerning the product -->
 
 <div>
@@ -35,7 +39,7 @@ Economy two-doors start at just over $10,000, while exotic coupes run well in ex
     <tr>
       <th>ID</th>
       <th>Brand/Model</th>
-      <th>Created at</th>
+      <th>Submitted</th>
       <th>Purchased Date</th>
       <th>Purchase Price</th>
       <th>Actions</th>
@@ -50,9 +54,12 @@ Economy two-doors start at just over $10,000, while exotic coupes run well in ex
         <td><%= product.purchased %></td>
         <td>$<%= product.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse%></td>
         <td>
-          <%= link_to 'New', new_product_path, :class => 'btn btn-mini' %>
-          <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-mini' %>
-          <%= link_to 'Destroy', product_path(product), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+
+<div class="btn-group">
+          <%= link_to 'New', new_product_path, :class => 'btn btn-default' %>
+          <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-default' %>
+          <%= link_to 'Destroy', product_path(product), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-default' %>
+</div>
           <tr>
 <% end %>
   </tbody>
@@ -67,6 +74,6 @@ Economy two-doors start at just over $10,000, while exotic coupes run well in ex
 
 
 <!-- email -->
-<h6>Email: <%= @user.email %></h6>
+
 
 

@@ -2,17 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Authapp</title>
+  <title>--Data--</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 
 <ol class="breadcrumb">
-  <li><a href="/">Home</a></li>
-  <li><a href="/users/new">Create</a></li>
-  <li><a href="/sessions/new">Login</a></li>
-  <li><a href="/admin">Admin</a></li>
+  <li><a href="/"> <span class="glyphicon glyphicon-list-alt"></span> Home</a></li>
+  <li><a href="/users/new"> <span class="glyphicon glyphicon-pencil"></span> Create</a></li>
+  <li><a href="/sessions/new"><span class="glyphicon  glyphicon-log-in"></span> Login</a></li>
+  <li><a href="/admin"><span class="glyphicon glyphicon-tower"></span> Admin</a></li>
   <li class="active">History</li>
 </ol>
 
@@ -31,7 +31,7 @@ input {
 <%= flash[:errors] if flash[:errors] %>
 <%= yield %>
 <hr>
-<%= params.inspect %>
+
 </body>
 
 </html>
