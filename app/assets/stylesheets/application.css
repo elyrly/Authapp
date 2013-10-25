@@ -12,3 +12,15 @@
  *= require_tree .
  */
 
+@font-face {
+  font-family: 'KlinicSlabLight';
+  src:
+  url('fonts/KlinicSlabLight')
+}
+
+@font-face {
+  font-family: 'Vincent-Regular';
+  src:
+  url('fonts/Vincent-Regular')
+}
+

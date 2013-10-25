@@ -8,7 +8,7 @@
 <div class="container">
   <div class="row">
 <div class="col-xs-12 col-sm-6 col-md-9">
-<h1>Hi <%= @user.username.capitalize %></h1>
+<h2>Welcome <%= @user.username.capitalize %></h2>
 
 <!-- introduction to the product -->
 
@@ -20,9 +20,12 @@
 </div>
 
 
+<!-- email -->
+
+
 
 <div class="col-xs-6 col-sm-6 col-md-3">
-<h2>MY2014 Premium Midsize Coupe</h2>
+<h4>MY2014 Premium Midsize Coupe</h4>
       <p>Coupes and two-door hatchbacks are typically based on a corresponding four-door sedan. The majority of coupes currently on the market are either compact or midsize, while most hatchbacks are compacts.  </p>
       <p>Price
 Economy two-doors start at just over $10,000, while exotic coupes run well in excess of $100,000. Lower-priced coupes and hatchbacks tend to cost slightly less than their four-door counterparts, while premium coupes are often several hundred dollars more than their sedan counterparts.</p>
@@ -71,9 +74,4 @@ Economy two-doors start at just over $10,000, while exotic coupes run well in ex
 
 
 <%= line_chart Product.group("purchased").maximum(:price) %>
-
-
-<!-- email -->
-
-
 
