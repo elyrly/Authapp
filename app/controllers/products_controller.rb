@@ -76,7 +76,6 @@ class ProductsController < ApplicationController
     @product.destroy
 
     respond_to do |format|
-      # binding.pry
       format.html {  redirect_to :back}
       format.json { head :no_content }
     end

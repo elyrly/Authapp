@@ -1,6 +1,7 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>--Data--</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -8,30 +9,14 @@
   <%= csrf_meta_tags %>
 </head>
 
+<body>
+
 <ol class="breadcrumb">
   <li><a href="/"> <span class="glyphicon glyphicon-list-alt"></span> Home</a></li>
   <li><a href="/users/new"> <span class="glyphicon glyphicon-pencil"></span> Create</a></li>
   <li><a href="/sessions/new"><span class="glyphicon  glyphicon-log-in"></span> Login</a></li>
   <li><a href="/admin"><span class="glyphicon glyphicon-tower"></span> Admin</a></li>
 </ol>
-
-
-
-<style>
-label {
-  margin-bottom: 10px;
-}
-input {
-  margin-bottom: 10px;
-}
-
-body{
-  font-family: 'KlinicSlabLight';
-}
-</style>
-
-<body>
-
 
 <%= flash[:errors] if flash[:errors] %>
 <%= yield %>

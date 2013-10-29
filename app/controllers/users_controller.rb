@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 # skip_before_filter :authorize, only: [:new, :create]
 
-def index
-end
+  def index
+  end
 
   def new
     @product = Product.new
@@ -23,6 +23,7 @@ end
     render :new
   end
 end
+
 
   def edit
      @product = Product.find(params[:id])
