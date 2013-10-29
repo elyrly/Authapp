@@ -11,11 +11,14 @@ gem 'font-awesome-sass'
 
 
 # added for Heroku
-group :development do
+group :development, :test do
   gem 'pry'
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem "nyan-cat-formatter"
   #all your other testing gems go here
 end
+
 
 # added for Heroku pg =PostgreSQL
 group :production do

@@ -21,9 +21,8 @@ class UsersController < ApplicationController
   else
     flash[:errors] = @user.errors.full_messages
     render :new
+    end
   end
-end
-
 
   def edit
      @product = Product.find(params[:id])
@@ -31,17 +30,12 @@ end
   end
 
   def update
-
   end
 
   def destroy
-
   end
 
   def admin
 @user = User.all
   end
-
-
-
 end

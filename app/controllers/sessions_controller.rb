@@ -1,12 +1,11 @@
 class SessionsController < ApplicationController
   include SessionsHelper
-
   skip_before_filter :authorize, only: [:new, :create]
+
   def new
   end
 
   def create
-
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
         sign_in(user)
@@ -14,8 +13,8 @@ class SessionsController < ApplicationController
     else
       flash[:errors] = "Errors"
       render :new
+    end
   end
-end
 
   def destroy
     sign_out
@@ -25,5 +24,4 @@ end
   def current_user
     User.find_by_remember_token(cookies[:remember_token])
   end
-
 end
